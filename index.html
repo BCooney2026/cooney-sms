@@ -1,164 +1,446 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cooney Provisions | Boar's Head Distributor | Est. 1983</title>
-<style>
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:#0d0d0d;color:#f5f1e8;font-family:Georgia,'Times New Roman',serif;}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cooney Provisions, Inc. | Employee SMS Consent</title>
+  <meta name="description" content="Cooney Provisions, Inc. employee SMS consent page for internal work-related driver reminders and operational notices." />
 
-  /* HEADER */
-  header{background:#0d0d0d;border-bottom:3px solid #d4af37;padding:28px 40px;text-align:center;}
-  header img{width:420px;max-width:90%;height:auto;}
+  <style>
+    :root {
+      --red: #b5121b;
+      --dark-red: #7f0d14;
+      --gold: #c6a15b;
+      --black: #171717;
+      --gray: #f5f5f5;
+      --text: #222;
+      --muted: #666;
+      --white: #ffffff;
+      --border: #dddddd;
+    }
 
-  /* HERO */
-  .hero{background:#b11116;padding:48px 40px;text-align:center;border-bottom:3px solid #d4af37;}
-  .hero .eyebrow{font-family:Arial,sans-serif;font-size:11px;letter-spacing:4px;text-transform:uppercase;color:#f3c946;margin-bottom:10px;}
-  .hero h1{font-size:36px;font-weight:bold;color:#ffffff;letter-spacing:.5px;line-height:1.2;}
-  .hero p{margin-top:14px;font-size:16px;color:#f5dada;line-height:1.6;max-width:600px;margin-left:auto;margin-right:auto;}
+    * {
+      box-sizing: border-box;
+    }
 
-  /* SECTIONS */
-  .wrap{max-width:900px;margin:0 auto;padding:0 30px;}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--gray);
+      line-height: 1.6;
+    }
 
-  .about{padding:56px 0;border-bottom:1px solid #2a2a2a;}
-  .about h2{font-size:22px;color:#d4af37;letter-spacing:1px;margin-bottom:18px;}
-  .about p{font-size:15px;line-height:1.75;color:#d8d2c2;margin-bottom:14px;}
+    header {
+      background: linear-gradient(135deg, var(--dark-red), var(--red));
+      color: var(--white);
+      padding: 44px 20px;
+      text-align: center;
+      border-bottom: 6px solid var(--gold);
+    }
 
-  /* SERVICE CARDS */
-  .services{padding:56px 0;border-bottom:1px solid #2a2a2a;}
-  .services h2{font-size:22px;color:#d4af37;letter-spacing:1px;margin-bottom:28px;text-align:center;}
-  .cards{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
-  .card{background:#1a1a1a;border:1px solid #2e2e2e;border-top:4px solid #b11116;padding:24px 22px;flex:1 1 240px;max-width:270px;}
-  .card h3{font-size:16px;color:#f5f1e8;margin-bottom:10px;}
-  .card p{font-size:13px;color:#9a9080;line-height:1.6;}
+    header h1 {
+      margin: 0;
+      font-size: 2.3rem;
+      letter-spacing: 0.5px;
+    }
 
-  /* TERRITORY */
-  .territory{padding:56px 0;border-bottom:1px solid #2a2a2a;text-align:center;}
-  .territory h2{font-size:22px;color:#d4af37;letter-spacing:1px;margin-bottom:18px;}
-  .territory p{font-size:15px;color:#d8d2c2;line-height:1.75;max-width:600px;margin:0 auto;}
-  .counties{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:24px;}
-  .county{background:#1a1a1a;border:1px solid #2e2e2e;border-left:3px solid #d4af37;padding:8px 16px;font-family:Arial,sans-serif;font-size:13px;color:#d8d2c2;}
+    header p {
+      margin: 12px auto 0;
+      max-width: 850px;
+      font-size: 1.05rem;
+    }
 
-  /* BOARS HEAD */
-  .bh{background:#1a1a1a;border-top:3px solid #d4af37;border-bottom:3px solid #d4af37;padding:40px;text-align:center;}
-  .bh p{font-family:Arial,sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#d4af37;margin-bottom:8px;}
-  .bh h2{font-size:20px;color:#f5f1e8;}
+    nav {
+      background: var(--black);
+      padding: 12px 20px;
+      text-align: center;
+    }
 
-  /* CONTACT */
-  .contact{padding:56px 0;text-align:center;}
-  .contact h2{font-size:22px;color:#d4af37;letter-spacing:1px;margin-bottom:28px;}
-  .contact-grid{display:flex;flex-wrap:wrap;gap:24px;justify-content:center;}
-  .contact-item{background:#1a1a1a;border:1px solid #2e2e2e;padding:24px 32px;min-width:200px;}
-  .contact-item .label{font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#d4af37;margin-bottom:8px;}
-  .contact-item .value{font-size:15px;color:#f5f1e8;}
-  .contact-item a{color:#f5f1e8;text-decoration:none;}
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      font-size: 0.95rem;
+    }
 
-  /* FOOTER */
-  footer{background:#0d0d0d;border-top:3px solid #d4af37;padding:24px 40px;text-align:center;}
-  footer p{font-family:Arial,sans-serif;font-size:11px;color:#5a5248;letter-spacing:1px;}
-  footer .gold{color:#d4af37;font-size:14px;font-family:Georgia,serif;letter-spacing:2px;display:block;margin-bottom:6px;}
+    nav a:hover {
+      color: var(--gold);
+    }
 
-  @media(max-width:600px){
-    .hero h1{font-size:26px;}
-    header img{width:300px;}
-    .card{max-width:100%;}
-  }
-</style>
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 28px 18px 50px;
+    }
+
+    section {
+      background: var(--white);
+      margin: 0 0 22px;
+      padding: 26px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    h2 {
+      color: var(--red);
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1.55rem;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--black);
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    .hero-note {
+      font-size: 1.05rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      background: #fff4f4;
+      color: var(--dark-red);
+      border: 1px solid #f0c8c8;
+      border-radius: 999px;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    .sms-section {
+      border: 2px solid var(--red);
+      box-shadow: 0 4px 14px rgba(181, 18, 27, 0.12);
+    }
+
+    .notice-box {
+      background: #fff8e8;
+      border: 1px solid #efd39a;
+      padding: 16px;
+      border-radius: 10px;
+      margin: 18px 0;
+    }
+
+    .disclosure-box {
+      background: #f8f8f8;
+      border: 1px solid var(--border);
+      padding: 16px;
+      border-radius: 10px;
+      margin: 18px 0;
+      font-size: 0.98rem;
+    }
+
+    form {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fbfbfb;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 14px 0 6px;
+    }
+
+    input[type="text"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #cfcfcf;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: var(--white);
+    }
+
+    .checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .checkbox-row input {
+      margin-top: 5px;
+      transform: scale(1.15);
+    }
+
+    .checkbox-row label {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    button {
+      margin-top: 18px;
+      background: var(--red);
+      color: var(--white);
+      border: none;
+      padding: 13px 18px;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: var(--dark-red);
+    }
+
+    .links a {
+      color: var(--red);
+      font-weight: bold;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .contact-card {
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 24px 18px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 0.92rem;
+    }
+
+    footer a {
+      color: var(--gold);
+    }
+
+    @media (max-width: 650px) {
+      header h1 {
+        font-size: 1.75rem;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px 8px;
+      }
+
+      section {
+        padding: 20px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <header>
+    <h1>Cooney Provisions, Inc.</h1>
+    <p class="hero-note">
+      A family-owned Boar's Head distributor serving food service, deli, grocery, and specialty retail accounts throughout the Greater Philadelphia region.
+    </p>
+  </header>
 
-<header>
-  <img src="https://bcooney2026.github.io/cooney-sms/Logo.png" alt="Cooney Provisions — Est. 1983">
-</header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">What We Do</a>
+    <a href="#territory">Territory</a>
+    <a href="#sms">Employee SMS Program</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<section class="hero">
-  <div class="eyebrow">Premium Food Service Distribution</div>
-  <h1>Philadelphia's Trusted<br>Boar's Head Purveyor</h1>
-  <p>Serving independent delis, restaurants, grocery stores, and foodservice operators across the greater Philadelphia area since 1983.</p>
-</section>
+  <main>
+    <section id="about">
+      <h2>About Cooney Provisions</h2>
+      <p>
+        Cooney Provisions, Inc. is a family-owned food distribution company based in Spring City, Pennsylvania.
+        Since 1983, our company has served customers with dependable delivery, personal service, and a route-based
+        distribution model built around long-term customer relationships.
+      </p>
+      <p>
+        We work with restaurants, delis, grocery stores, specialty markets, caterers, and food service operators who rely on
+        consistent service, stocked delivery trucks, and responsive support from our team.
+      </p>
 
-<div class="wrap">
-
-  <section class="about">
-    <h2>About Cooney Provisions</h2>
-    <p>Cooney Provisions, Inc. is a second-generation, family-operated food service distributor headquartered in Spring City, Pennsylvania. Founded in 1983, we have built our reputation on premium product quality, operational reliability, and a level of customer service that warehouse-style distributors simply cannot match.</p>
-    <p>We are an authorized Boar's Head purveyor, delivering premium deli meats, cheeses, and specialty foods directly to our customers five days a week across Chester, Montgomery, Delaware, Philadelphia, and parts of Bucks and Berks counties.</p>
-    <p>Our trucks operate as mobile warehouses — meaning our customers are never locked into rigid ordering windows. If you run short, we can often get product to you the same day.</p>
-  </section>
-
-  <section class="services">
-    <h2>What We Offer</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Premium Deli Meats</h3>
-        <p>Full line of Boar's Head sliced meats, specialty hams, charcuterie, and deli staples delivered fresh to your door.</p>
+      <div class="badge-row">
+        <span class="badge">Family-Owned</span>
+        <span class="badge">Established 1983</span>
+        <span class="badge">Boar's Head Distributor</span>
+        <span class="badge">Greater Philadelphia Region</span>
       </div>
-      <div class="card">
-        <h3>Artisan Cheeses</h3>
-        <p>Domestic and imported cheese loaves, pre-cut retail packs, specialty wheels, and food service bulk formats.</p>
+    </section>
+
+    <section id="services">
+      <h2>What We Do</h2>
+      <p>
+        Cooney Provisions provides route-based food distribution with a service-first approach. Our delivery drivers and
+        support team help customers manage their day-to-day product needs with reliable deliveries and clear communication.
+      </p>
+
+      <ul>
+        <li>Boar's Head product distribution</li>
+        <li>Route-based customer delivery service</li>
+        <li>Restaurant, deli, grocery, and specialty market support</li>
+        <li>Same-day communication for operational updates when needed</li>
+        <li>Internal driver coordination for required operational sheets and weekly cutoffs</li>
+      </ul>
+    </section>
+
+    <section id="territory">
+      <h2>Service Territory</h2>
+      <p>
+        Cooney Provisions serves customers throughout parts of southeastern Pennsylvania, including Chester County,
+        Montgomery County, Delaware County, Philadelphia County, and portions of Bucks County.
+      </p>
+    </section>
+
+    <section id="sms" class="sms-section">
+      <h2>Employee SMS Program</h2>
+
+      <p>
+        Cooney Provisions, Inc. uses SMS text messaging to send internal, work-related reminders and operational notices
+        to company delivery drivers.
+      </p>
+
+      <p>
+        Messages may include reminders to complete required operational sheets, special order sheets, delivery-related
+        forms, schedule updates, route updates, cutoff reminders, and company notices.
+      </p>
+
+      <div class="notice-box">
+        <strong>This SMS program is for Cooney Provisions, Inc. employees only.</strong>
+        No marketing or promotional messages are sent through this program. No messages are sent to customers,
+        vendors, or members of the general public.
       </div>
-      <div class="card">
-        <h3>Specialty & Seasonal</h3>
-        <p>Hummus, dips, condiments, pickles, olives, charcuterie packs, shingle packs, and seasonal items.</p>
+
+      <h3>How Employees Opt In</h3>
+      <p>
+        Cooney Provisions delivery drivers opt in by completing the employee SMS consent form below. Drivers enter their
+        name and mobile phone number, then check the SMS consent box before submitting the form.
+      </p>
+
+      <div class="disclosure-box">
+        <strong>SMS Disclosure:</strong><br />
+        Message frequency varies. Message and data rates may apply. Reply HELP for help. Reply STOP to opt out at any time.
+        SMS consent is optional and is not required as a condition of employment.
       </div>
-      <div class="card">
-        <h3>Mobile Warehouse Delivery</h3>
-        <p>Same-day delivery capability. Our trucks run live inventory daily — your customers never have to wait.</p>
+
+      <form id="smsConsentForm">
+        <h3>Employee SMS Consent Form</h3>
+
+        <label for="employeeName">Employee Name</label>
+        <input type="text" id="employeeName" name="Employee Name" placeholder="Enter employee name" required />
+
+        <label for="mobilePhone">Mobile Phone Number</label>
+        <input type="tel" id="mobilePhone" name="Mobile Phone Number" placeholder="Enter mobile phone number" required />
+
+        <div class="checkbox-row">
+          <input type="checkbox" id="smsConsent" name="SMS Consent" required />
+          <label for="smsConsent">
+            By checking this box and submitting this form, I agree to receive work-related SMS messages from
+            Cooney Provisions, Inc., including reminders to complete required operational sheets, special order sheets,
+            delivery-related forms, schedule updates, route updates, cutoff reminders, and company notices.
+            Message frequency varies. Message and data rates may apply. Reply HELP for help. Reply STOP to opt out.
+            SMS consent is optional and is not required as a condition of employment.
+          </label>
+        </div>
+
+        <button type="submit">Submit SMS Consent</button>
+
+        <p style="font-size: 0.92rem; color: var(--muted); margin-top: 12px;">
+          This page demonstrates the employee SMS opt-in process used by Cooney Provisions, Inc. for internal
+          work-related driver messaging.
+        </p>
+      </form>
+
+      <p class="links">
+        <strong>Privacy Policy:</strong>
+        <a href="https://bcooney2026.github.io/cooney-sms/privacy.html">https://bcooney2026.github.io/cooney-sms/privacy.html</a>
+      </p>
+
+      <p class="links">
+        <strong>Terms and Conditions:</strong>
+        <a href="https://bcooney2026.github.io/cooney-sms/terms.html">https://bcooney2026.github.io/cooney-sms/terms.html</a>
+      </p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Cooney Provisions</h2>
+      <p>
+        For business inquiries, customer service, or employee SMS program questions, contact Cooney Provisions, Inc.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <strong>Company</strong><br />
+          Cooney Provisions, Inc.
+        </div>
+
+        <div class="contact-card">
+          <strong>Address</strong><br />
+          220 Senn Drive<br />
+          Spring City, PA 19475
+        </div>
+
+        <div class="contact-card">
+          <strong>Phone</strong><br />
+          <a href="tel:6109484555">610-948-4555</a>
+        </div>
+
+        <div class="contact-card">
+          <strong>Email</strong><br />
+          <a href="mailto:brianrcooney@gmail.com">brianrcooney@gmail.com</a>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-</div>
+  <footer>
+    <p>
+      &copy; 2026 Cooney Provisions, Inc. All rights reserved.
+    </p>
+    <p>
+      <a href="https://bcooney2026.github.io/cooney-sms/privacy.html">Privacy Policy</a>
+      &nbsp;|&nbsp;
+      <a href="https://bcooney2026.github.io/cooney-sms/terms.html">Terms and Conditions</a>
+    </p>
+  </footer>
 
-<div class="bh">
-  <p>Authorized Purveyor</p>
-  <h2>Boar's Head Brand &mdash; Brunckhorst's Since 1905</h2>
-</div>
+  <script>
+    document.getElementById("smsConsentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
 
-<div class="wrap">
+      const employeeName = document.getElementById("employeeName").value.trim();
+      const mobilePhone = document.getElementById("mobilePhone").value.trim();
+      const consentChecked = document.getElementById("smsConsent").checked;
 
-  <section class="territory">
-    <h2>Our Territory</h2>
-    <p>We cover the greater Philadelphia metropolitan area and surrounding counties, with routes running five days a week.</p>
-    <div class="counties">
-      <div class="county">Chester County, PA</div>
-      <div class="county">Montgomery County, PA</div>
-      <div class="county">Delaware County, PA</div>
-      <div class="county">Philadelphia County, PA</div>
-      <div class="county">Parts of Bucks County, PA</div>
-      <div class="county">Parts of Berks County, PA</div>
-    </div>
-  </section>
+      if (!employeeName || !mobilePhone || !consentChecked) {
+        alert("Please complete all required fields and check the SMS consent box before submitting.");
+        return;
+      }
 
-  <section class="contact">
-    <h2>Contact Us</h2>
-    <div class="contact-grid">
-      <div class="contact-item">
-        <div class="label">Phone</div>
-        <div class="value"><a href="tel:+16106560326">(610) 656-0326</a></div>
-      </div>
-      <div class="contact-item">
-        <div class="label">Email</div>
-        <div class="value"><a href="mailto:brianrcooney@gmail.com">brianrcooney@gmail.com</a></div>
-      </div>
-      <div class="contact-item">
-        <div class="label">Address</div>
-        <div class="value">3620 Schuylkill Road<br>Spring City, PA 19475</div>
-      </div>
-      <div class="contact-item">
-        <div class="label">Hours</div>
-        <div class="value">Monday &ndash; Friday<br>Delivery routes run daily</div>
-      </div>
-    </div>
-  </section>
-
-</div>
-
-<footer>
-  <span class="gold">COONEY PROVISIONS</span>
-  <p>&copy; 2026 Cooney Provisions, Inc. &nbsp;&middot;&nbsp; Spring City, PA &nbsp;&middot;&nbsp; Est. 1983 &nbsp;&middot;&nbsp; USDOT 125591</p>
-</footer>
-
+      alert("Thank you. Your SMS consent has been submitted to Cooney Provisions, Inc.");
+    });
+  </script>
 </body>
 </html>
