@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cooney Provisions, Inc. | Employee SMS Consent</title>
-  <meta name="description" content="Cooney Provisions, Inc. employee SMS consent page for internal work-related driver reminders and operational notices." />
+  <meta name="description" content="Cooney Provisions, Inc. optional employee SMS program for driver reminders about special order sheet deadlines and route or schedule changes." />
 
   <style>
     :root {
@@ -302,7 +302,7 @@
         <li>Route-based customer delivery service</li>
         <li>Restaurant, deli, grocery, and specialty market support</li>
         <li>Same-day communication for operational updates when needed</li>
-        <li>Internal driver coordination for required operational sheets and weekly cutoffs</li>
+        <li>Internal driver coordination for weekly order deadlines and route schedules</li>
       </ul>
     </section>
 
@@ -318,13 +318,14 @@
       <h2>Employee SMS Program</h2>
 
       <p>
-        Cooney Provisions, Inc. uses SMS text messaging to send internal, work-related reminders and operational notices
-        to company delivery drivers.
+        Cooney Provisions, Inc. offers an optional SMS text messaging program for its own delivery drivers.
+        Drivers who choose to join receive reminders about weekly special order sheet deadlines and notices
+        about route or schedule changes.
       </p>
 
       <p>
-        Messages may include reminders to complete required operational sheets, special order sheets, delivery-related
-        forms, schedule updates, route updates, cutoff reminders, and company notices.
+        Joining is entirely voluntary. Drivers who do not join, or who later opt out, are not affected in any way,
+        and participation is never a condition of employment.
       </p>
 
       <div class="notice-box">
@@ -335,14 +336,14 @@
 
       <h3>How Employees Opt In</h3>
       <p>
-        Cooney Provisions delivery drivers opt in by completing the employee SMS consent form below. Drivers enter their
-        name and mobile phone number, then check the SMS consent box before submitting the form.
+        Drivers who want text reminders can opt in by completing the form below: enter your name and mobile number,
+        then check the SMS consent box. The box is unchecked by default and you only check it if you want texts.
       </p>
 
       <div class="disclosure-box">
         <strong>SMS Disclosure:</strong><br />
-        Message frequency varies. Message and data rates may apply. Reply HELP for help. Reply STOP to opt out at any time.
-        SMS consent is optional and is not required as a condition of employment.
+        Message frequency varies, typically 1 to 4 messages per week. Message and data rates may apply.
+        Reply HELP for help. Reply STOP to opt out at any time. SMS consent is optional and is not a condition of employment.
       </div>
 
       <form id="smsConsentForm">
@@ -355,32 +356,26 @@
         <input type="tel" id="mobilePhone" name="Mobile Phone Number" placeholder="Enter mobile phone number" required />
 
         <div class="checkbox-row">
-          <input type="checkbox" id="smsConsent" name="SMS Consent" required />
+          <input type="checkbox" id="smsConsent" name="SMS Consent" />
           <label for="smsConsent">
-            By checking this box and submitting this form, I agree to receive work-related SMS messages from
-            Cooney Provisions, Inc., including reminders to complete required operational sheets, special order sheets,
-            delivery-related forms, schedule updates, route updates, cutoff reminders, and company notices.
-            Message frequency varies. Message and data rates may apply. Reply HELP for help. Reply STOP to opt out.
-            SMS consent is optional and is not required as a condition of employment.
+            I agree to receive SMS reminders from Cooney Provisions, Inc. about special order sheet deadlines and
+            route or schedule changes. Message frequency varies, typically 1 to 4 messages per week. Message and data
+            rates may apply. Reply HELP for help, STOP to opt out. Consent is optional and is not a condition of employment.
           </label>
         </div>
 
         <button type="submit">Submit SMS Consent</button>
 
-        <p style="font-size: 0.92rem; color: var(--muted); margin-top: 12px;">
-          This page demonstrates the employee SMS opt-in process used by Cooney Provisions, Inc. for internal
-          work-related driver messaging.
-        </p>
       </form>
 
       <p class="links">
         <strong>Privacy Policy:</strong>
-        <a href="https://bcooney2026.github.io/cooney-sms/privacy.html">https://bcooney2026.github.io/cooney-sms/privacy.html</a>
+        <a href="https://sms.cooneyprovisions.com/privacy.html">https://sms.cooneyprovisions.com/privacy.html</a>
       </p>
 
       <p class="links">
         <strong>Terms and Conditions:</strong>
-        <a href="https://bcooney2026.github.io/cooney-sms/terms.html">https://bcooney2026.github.io/cooney-sms/terms.html</a>
+        <a href="https://sms.cooneyprovisions.com/terms.html">https://sms.cooneyprovisions.com/terms.html</a>
       </p>
     </section>
 
@@ -409,7 +404,7 @@
 
         <div class="contact-card">
           <strong>Email</strong><br />
-          <a href="mailto:brianrcooney@gmail.com">brianrcooney@gmail.com</a>
+          <a href="mailto:briancooney@cooneyprovisions.com">briancooney@cooneyprovisions.com</a>
         </div>
       </div>
     </section>
@@ -420,9 +415,9 @@
       &copy; 2026 Cooney Provisions, Inc. All rights reserved.
     </p>
     <p>
-      <a href="https://bcooney2026.github.io/cooney-sms/privacy.html">Privacy Policy</a>
+      <a href="https://sms.cooneyprovisions.com/privacy.html">Privacy Policy</a>
       &nbsp;|&nbsp;
-      <a href="https://bcooney2026.github.io/cooney-sms/terms.html">Terms and Conditions</a>
+      <a href="https://sms.cooneyprovisions.com/terms.html">Terms and Conditions</a>
     </p>
   </footer>
 
@@ -435,7 +430,7 @@
       const consentChecked = document.getElementById("smsConsent").checked;
 
       if (!employeeName || !mobilePhone || !consentChecked) {
-        alert("Please complete all required fields and check the SMS consent box before submitting.");
+        alert("To opt in, enter your name and mobile number and check the SMS consent box.");
         return;
       }
 
